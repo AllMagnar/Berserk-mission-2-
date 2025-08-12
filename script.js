@@ -66,7 +66,7 @@ function renderStoreProducts() {
     card.innerHTML = `
       <img src="${p.img}" alt="${escapeHtml(p.title)}">
       <h3>${escapeHtml(p.title)}</h3>
-      <p>Collector's fan copy — placeholder description to be replaced with real copy.</p>
+      <p>Collector's fan copy.</p>
       <div class="priceRow">
         <div class="price">$${p.price.toFixed(2)}</div>
         <div>
