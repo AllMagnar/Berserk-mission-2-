@@ -1,0 +1,136 @@
+/* Shared gritty Berserk-themed styles */
+
+/* reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(40,0,0,0.4), rgba(0,0,0,0.75)),
+    url('https://via.placeholder.com/1600x900/000000/222222?text=Backdrop+Placeholder') center/cover fixed no-repeat;
+  color:#e9e6e6;
+  padding:18px 28px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* blood splatter vignette (subtle) */
+body::after{
+  content:"";
+  position:fixed; inset:0; pointer-events:none;
+  background:
+    radial-gradient(600px 400px at 90% 10%, rgba(139,0,0,0.06), transparent 10%),
+    radial-gradient(500px 300px at 10% 90%, rgba(80,0,0,0.04), transparent 10%);
+  mix-blend-mode:multiply;
+}
+
+body {
+  background-image:url(https://pixeldemonmg.co.uk/cdn/shop/files/berserk-gigapixel-art-width-2480px.jpg?v=1699186641);
+  background-size: cover;
+}
+/* header */
+.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.brand{display:flex;gap:12px;align-items:center}
+.brand h1{color:#ff6b6b;font-size:20px;letter-spacing:1px}
+.brand .tag{font-size:12px;color:#4b4683;opacity:0.9}
+.sigil{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#750000,#2b0000);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
+
+/* nav */
+.nav{display:flex;gap:10px}
+.nav-link{color:#f5e9e9;text-decoration:none;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.02)}
+.cart-link{border:1px solid rgba(255,0,0,0.06)}
+.nav-link:hover{transform:translateY(-3px)}
+
+/* layout */
+.container{display:flex;gap:18px}
+.hero{flex-basis:100%;margin-bottom:14px;padding:18px;border-radius:10px;background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.7));border:1px solid rgba(255,0,0,0.06);box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+.hero h2{color:#ffb3b3;margin-bottom:6px}
+.hero-copy{opacity:0.9;line-height:1.5}
+
+/* products grid */
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;flex:1}
+.card{background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.78));padding:12px;border-radius:10px;border:1px solid rgba(255,0,0,0.05);box-shadow:0 8px 20px rgba(0,0,0,0.6);transition:transform .22s ease, box-shadow .22s ease}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.8)}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.card h3{margin-top:10px;color:#ffdede}
+.card p{font-size:13px;opacity:0.9;margin:6px 0}
+.priceRow{display:flex;justify-content:space-between;align-items:center}
+.price{font-weight:700;color:#fff2}
+.btn{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;cursor:pointer}
+.btn:hover{background:rgba(255,0,0,0.08);transform:translateY(-2px)}
+
+.site-footer{margin-top:18px;text-align:center;color:#c9c2c2;opacity:0.9;font-size:13px}
+
+/* cart page layout */
+.cart-page{gap:22px}
+.cart-panel{flex:1;background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.75));padding:16px;border-radius:10px;border:1px solid rgba(255,0,0,0.04)}
+.info-panel{width:360px;min-width:260px;background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.72));padding:16px;border-radius:10px;border:1px solid rgba(255,0,0,0.04)}
+
+.cart-list{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+.cart-item{display:flex;gap:12px;align-items:center;padding:8px;border-radius:8px;background:rgba(255,255,255,0.02)}
+.cart-item img{width:88px;height:66px;object-fit:cover;border-radius:6px}
+.cart-item .meta{flex:1}
+.qty-controls{display:flex;align-items:center;gap:8px}
+.smallBtn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px 8px;border-radius:6px;cursor:pointer}
+
+.cart-totals{margin-top:14px;border-top:1px dashed rgba(255,255,255,0.04);padding-top:12px}
+.cart-totals .line{display:flex;justify-content:space-between;margin-bottom:6px}
+.cart-totals .total{font-weight:800;color:#ffdede}
+.cart-actions{display:flex;gap:10px;margin-top:12px}
+.btn.danger{background:transparent;border:1px solid rgba(255,0,0,0.14);color:#ffadad}
+.btn.checkout{background:#b92b2b;color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer}
+
+/* thumbnails area on cart */
+.thumbs{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.thumbs img{width:100%;height:120px;object-fit:cover;border-radius:6px}
+
+/* responsive */
+@media (max-width:980px){
+  .container{flex-direction:column}
+  .info-panel{width:auto}
+  .cart-panel{order:1}
+}
+
+/* === Animations === */
+
+/* Fade in for main sections */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Zoom in on product images when hovered */
+.product img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.6);
+}
+
+/* Smooth hover effect for buttons */
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  background-color: #a00;
+}
+
+/* Berserk blood-drip animation for the header */
+@keyframes drip {
+  0% { text-shadow: 0 0 5px red; }
+  50% { text-shadow: 0 5px 15px red; }
+  100% { text-shadow: 0 0 5px red; }
+}
+header h1 {
+  animation: drip 1.5s infinite ease-in-out;
+}
+

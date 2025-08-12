@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Berserk Bazaar — Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cart">
+  <header class="site-header">
+    <div class="brand">
+      <div class="sigil" aria-hidden="true">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2 L15 8 L22 9 L17 13 L18 20 L12 16 L6 20 L7 13 L2 9 L9 8 Z" fill="#b92b2b"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Berserk Bazaar</h1>
+        <p class="tag">Your dark haul</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Store</a>
+      <a class="nav-link cart-link" href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main class="container cart-page">
+    <section class="cart-panel">
+      <h2>Your Cart</h2>
+      <div id="cartList" class="cart-list">
+        <!-- cart items injected here -->
+      </div>
+
+      <div class="cart-totals">
+        <div class="line"><span>Subtotal</span><span id="subtotalText">$0.00</span></div>
+        <div class="line"><span>Shipping</span><span id="shippingText">$0.00</span></div>
+        <div class="line total"><span>Total</span><span id="totalText">$0.00</span></div>
+      </div>
+
+      <div class="cart-actions">
+        <button id="clearBtn" class="btn danger">Clear Cart</button>
+        <button id="checkoutBtn" class="btn checkout">Checkout</button>
+      </div>
+    </section>
+
+    <aside class="info-panel">
+      <h3>About Berserk (short)</h3>
+      <p>
+        Berserk,by Kentaro Miura, is an epic dark fantasy exploring fate, free will, ambition and the cost of revenge.
+        The story centers on Guts, Griffith, and the Band of the Hawk, concluding in cruel betrayals and the Eclipse.
+      </p>
+
+      <h3>Iconic Characters</h3>
+      <ul>
+        <li>Guts — The Black Swordsman</li>
+        <li>Griffith — The Ambitious Hawk</li>
+        <li>Casca — Warrior And Survivor</li>
+      </ul>
+
+      <h3>Images</h3>
+      <div class="thumbs">
+        <img src="https://i.pinimg.com/736x/56/85/05/5685050e443aa924992c680db3529fb4.jpg" alt="Guts">
+        <img src="https://i.redd.it/26dhb33dwgwb1.jpg" alt="Griffith">
+         <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/06/How-Casca-eventually-returns-in-Berserk-singlehandedly-elevated-the-entire-series.jpg?q=70&fit=contain&w=1200&h=628&dpr=1" alt="Casca">
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <small>Fan tribute. Remember to do the footer</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
